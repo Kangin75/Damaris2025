@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <title>教室書籍借閱登記表</title>
+    <style>
+        body {
+            font-family: "微軟正黑體";
+            background: #f4f4f4;
+            padding: 40px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 400px;
+            margin: 20px auto;
+            box-shadow: 0 4 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            margin-top: 30px;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+
+        th {
+            background: #f0f0f0;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>📚 教室書籍借閱登記表</h1>
+
+    <form method="POST" action="">
+        <label>書名：</label>
+        <input type="text" name="book_title" required>
+
+        <label>借閱者姓名：</label>
+        <input type="text" name="borrower_name" required>
+
+        <label>學號（可選）：</label>
+        <input type="text" name="student_id">
+
+        <label>借閱日期：</label>
+        <input type="date" name="borrow_date" required>
+
+        <label>備註：</label>
+        <textarea name="note" rows="2"></textarea>
+
+        <button type="submit">登記借閱</button>
+    </form>
+
+    <h2>📖 借閱紀錄</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>書名</th>
+            <th>借閱者</th>
+            <th>學號</th>
+            <th>借閱日期</th>
+            <th>狀態</th>
+            <th>備註</th>
+        </tr>
+        <?php while ($row = $result->fetch_assoc()): ?>
+        <tr>
+            <td>
+                <?= $row["id"] ?>
+            </td>
+            <td>
+                <?= htmlspecialchars($row["book_title"]) ?>
+            </td>
+            <td>
+                <?= htmlspecialchars($row["borrower_name"]) ?>
+            </td>
+            <td>
+                <?= htmlspecialchars($row["student_id"]) ?>
+            </td>
+            <td>
+                <?= htmlspecialchars($row["borrow_date"]) ?>
+            </td>
+            <td>
+                <?= $row["status"] ?>
+            </td>
+            <td>
+                <?= htmlspecialchars($row["note"]) ?>
+            </td>
+        </tr>
+        <?php endwhile; ?>
+    </table>
+
+</body>
+
+</html>
