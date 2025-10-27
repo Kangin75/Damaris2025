@@ -215,7 +215,21 @@
         echo "<br>";
     }
     ?>
-
+<?php
+<h2>矩形－對角線</h2>
+<?php
+for ($i = 0; $i < 7; $i++) {
+    for ($j = 0; $j < 7; $j++) {
+        if ($i == 0 || $i == 6 || $j == 0 || $j == 6 || $i == $j || $i + $j == 6) {
+            echo "*";
+        } else {
+            echo "&nbsp;&nbsp;"; // 多一個 &nbsp; 讓間距對齊
+        }
+    }
+    echo "<br>";
+}
+?>
 </body>
+
 
 </html>
