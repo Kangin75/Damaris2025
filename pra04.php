@@ -15,11 +15,12 @@
 
 <?php
 //41
+/*
 $str="氣象署表示，今天（27日）東北季風影響，桃園以北及東半部地區有局部短暫雨，4縣市大雨特報，其他地區為多雲的天氣，午後中南部山區有局部短暫陣雨，白天南北溫差較大，明天天氣如何？ 氣象署指出，明天（28日） 東北季風影響，北台灣稍涼，其他地區早晚亦涼，本周天氣桃園以北易雨，秋意漸起。";
 $search='大雨';
 mb_substr();
 mb_strlen();
-
+/*
 //以下是OPEN AI的寫法
 // 初始變數
 $pos = 0;      // 從第 0 個字元開始找
@@ -47,7 +48,7 @@ if ($count == 0) {
 // 41
 $str = "氣象署表示，今天（27日）東北季風影響，桃園以北及東半部地區有局部短暫雨，4縣市大雨特報，其他地區為多雲的天氣，午後中南部山區有局部短暫陣雨，白天南北溫差較大，明天天氣如何？ 氣象署指出，明天（28日） 東北季風影響，北台灣稍涼，其他地區早晚亦涼，本周天氣桃園以北易雨，秋意漸起。";
 $search = '大雨';
-
+/
 // 初始化變數
 $len_str = mb_strlen($str, 'UTF-8');       // Length of the main string
 $len_search = mb_strlen($search, 'UTF-8');  // Length of the search string
@@ -85,6 +86,7 @@ if ($position !== -1) {
 //老師的寫法，先使用for迴圈撰寫
 //字串是一種陣列，所以字串在尋找的時候是從0開始找的
 //41
+/*
 $str="氣象署表示，今天（27日）東北季風影響，桃園以北及東半部地區有局部短暫雨，4縣市大雨特報，其他地區為多雲的天氣，午後中南部山區有局部短暫陣雨，白天南北溫差較大，明天天氣如何？ 氣象署指出，明天（28日） 東北季風影響，北台灣稍涼，其他地區早晚亦涼，本周天氣桃園以北易雨，秋意漸起。";
 $search='大雨';
 mb_substr();
@@ -109,6 +111,7 @@ echo "<hr>";
 echo "尋找:".$search;
 echo "<hr>";
 
+*/
 if ($pos >= 0) {
     echo "找到的字串在原字串的第.$pos.的位置";
 } else {
@@ -135,7 +138,7 @@ mb_strlen();
 $pos=-1;
 $count=0;
 $i=0;
-
+/*
 //當pos=-1，同時count總次數小於時，停止迴圈。不然就繼續往下找
 while ($pos==-1 && $count<mb_strlen($str)-mb_strlen($search)+1;i++) {
 $target=mb_substr($str,$i,mb_strlen($search));
@@ -162,7 +165,7 @@ echo"<hr>";
 echo"<hr>";
 
 echo mb_strpos($str,$search);
-
+*/
 
 //把以上while的做法嘗試使用do while試試看
 /*
@@ -190,6 +193,7 @@ $pos=-1;
 $count=0;
 $i=0;
 
+/*
 do{
     if ($search==$target) {
         $pos = $i; // 找到了！ 儲存指標位置
@@ -199,7 +203,7 @@ do{
 while ($pos==-1 && $count<mb_strlen($str)-mb_strlen($search)+1;i++) {
 $target=mb_substr($str,$i,mb_strlen($search);
 }
-
+*/
 
 echo "字串:".$str;
 echo "<hr>";

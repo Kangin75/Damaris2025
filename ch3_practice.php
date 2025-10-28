@@ -19,10 +19,16 @@ $level;
 
 if($score>=60){
     $test='及格';
-}else if{
+}else{
     $test='不及格';
-}else if($score<0 || $score>100){
+}else{
+    break;
+}
+
+if($score<0 || $score>100){
     echo "分數錯誤，請重新輸入"
+}else{
+    break;
 }
 /*
 if($score<=59){
@@ -49,6 +55,7 @@ if($score<=59){
 }
 */
 
+
 if($score>0 && $score<=59){
     $level="E";
 }else if($score>=60 && $score<=69){
@@ -62,7 +69,7 @@ if($score>0 && $score<=59){
     $level="A";
 
 }else{
-    
+    break;
 }
 
 switch($level){

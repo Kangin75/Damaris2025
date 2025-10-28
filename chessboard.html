@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,37 +9,50 @@
         /* 基礎 CSS 樣式 */
         table {
             border-collapse: collapse;
-            width: 480px; /* 8 * 60px */
+            width: 480px;
+            /* 8 * 60px */
             height: 480px;
         }
+
         td {
             width: 60px;
             height: 60px;
             text-align: center;
-            font-size: 40px; /* 棋子符號大小 */
+            font-size: 40px;
+            /* 棋子符號大小 */
             font-family: Arial, sans-serif;
             cursor: pointer;
         }
+
         .light {
-            background-color: #f0d9b5; /* 淺色格 */
+            background-color: #f0d9b5;
+            /* 淺色格 */
         }
+
         .dark {
-            background-color: #b58863; /* 深色格 */
+            background-color: #b58863;
+            /* 深色格 */
         }
-      .white-piece {
-            color: #FFFFFF; /* 白色棋子 (符號顏色) */
+
+        .white-piece {
+            color: #FFFFFF;
+            /* 白色棋子 (符號顏色) */
             text-shadow: 1px 1px 2px #000000;
         }
+
         .black-piece {
-            color: #000000; /* 黑色棋子 (符號顏色) */
+            color: #000000;
+            /* 黑色棋子 (符號顏色) */
             text-shadow: 1px 1px 2px #FFFFFF;
         }
     </style>
 
     </style>
 </head>
+
 <body>
-<?php
+
+    <?php
 
 /**
  * 國際象棋棋盤的初始佈局 (使用 Unicode 符號)
@@ -112,7 +126,9 @@ for ($r = 0; $r < 8; $r++) {
     echo '</tr>';
 }
 
-echo '</table>';
-?>    
+echo '';
+?>
+    </table>
 </body>
+
 </html>
