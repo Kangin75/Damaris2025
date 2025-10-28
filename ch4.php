@@ -16,9 +16,9 @@
 </body>
 <table>
 <?php
-    for(i=1;$i<=9;$i++){
+    for($i=1;$i<=9;$i++){
         echo "</tr>";
-        for(j=1;$j<=9;$j++){
+        for($j=1;$j<=9;$j++){
         echo "</td>";
         }
         echo "</tr>";
